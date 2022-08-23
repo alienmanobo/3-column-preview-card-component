@@ -1,0 +1,121 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root {
+    --bright-orange: hsl(31, 77%, 52%);   
+    --dark-cyan: hsl(184, 100%, 22%);
+    --very-dark-cyan: hsl(179, 100%, 13%);
+    --transparent-white: hsla(0, 0%, 100%, 0.75);
+    --very-light-gray: hsl(0, 0%, 95%);
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--very-light-gray);
+    font-size: 0.9375rem;
+}
+
+main {
+    max-width: 90em;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    margin: 6.25rem 12.5rem;
+}
+
+.column {padding: 3.125rem;}
+
+img {margin-bottom: 1.875rem;}
+
+h1 {
+    font-family: 'Big Shoulders Display';
+    font-size: 2.5rem;
+    color: var(--very-light-gray);
+    margin-bottom: 1.875rem;
+}
+
+p {
+    font-family: 'Lexend Deca';
+    color: var(--transparent-white);
+    line-height: 1.7;
+    letter-spacing: .3px;
+    text-align: start;
+    margin-right: 1.6875rem;
+    margin-bottom: 6.25rem;
+}
+
+.button {
+    font-family: 'Lexend Deca';
+    font-size: 0.9375rem;
+    padding: 0.9375rem 2.5rem;
+    border: 0.125rem var(--very-light-gray) solid;
+    border-radius: 1.875rem;
+}
+
+.button:hover {cursor: pointer;}
+
+.button-1 {color: var(--bright-orange);}
+
+.button-1:hover {
+    background-color: var(--bright-orange);
+    color: var(--transparent-white);
+}
+
+.button-2 {color: var(--dark-cyan);}
+
+.button-2:hover {
+    background-color: var(--dark-cyan);
+    color: var(--transparent-white);
+}
+.button-3 {color: var(--very-dark-cyan);}
+
+.button-3:hover {
+    background-color: var(--very-dark-cyan);
+    color: var(--transparent-white);
+}
+.sedan-col {
+    background-color: var(--bright-orange);
+    border-top-left-radius: 0.625rem;
+    border-bottom-left-radius: 0.625rem;
+
+}
+
+.suv-col {
+    background-color: var(--dark-cyan);
+}
+
+.lux-col {
+    background-color: var(--very-dark-cyan);
+    border-top-right-radius: 0.625rem;
+    border-bottom-right-radius: 0.625rem;
+}
+
+@media (max-width: 23.4375em) {
+    main {
+        display: block;
+        margin: 6.25rem 1.25rem;
+    }
+
+    .column {
+        margin-right: 0;
+        padding: 3.125rem;
+    }
+
+    p {margin-bottom: 1.875rem;}
+
+    .sedan-col {
+        border-bottom-left-radius: 0;
+        border-top-right-radius: 0.625rem;
+    }
+
+    .lux-col {
+        border-top-right-radius: 0;
+        border-bottom-left-radius: 0.625rem;
+    }
+}
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
